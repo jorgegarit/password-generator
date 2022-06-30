@@ -33,8 +33,23 @@ var generatePassword = function() {
   var confirmUpper = window.confirm("Would you like uppercase letters in your password?");
   var confirmLower = window.confirm("Would you like lowercase letters in your password?");
 
+  if (confirmNumbers === true) {
+    passwordOptions.push(randomNumbers)
+  }
 
+  if (confirmSpecial === true) {
+    passwordOptions.push(randomSpecial)
+  }
+
+  if (confirmUpper === true) {
+    passwordOptions.push(randomUppercase)
+  }
+
+  if (confirmLower === true) {
+    passwordOptions.push(randomLowercase)
+  }
   
+  console.log(passwordOptions);
 }
 
 
